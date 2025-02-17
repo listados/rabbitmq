@@ -16,6 +16,7 @@ services:
      - RABBITMQ_DEFAULT_USER=mqadmin
      - RABBITMQ_DEFAULT_PASS=Admin123XX_
      - CLUSTERED=true
+    command: ["bash", "-c", "chmod 400 /var/lib/rabbitmq/.erlang.cookie; rabbitmq-server"]
 networks: 
   lab: 
     external: true
